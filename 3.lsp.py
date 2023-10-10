@@ -25,13 +25,14 @@ class Snake(Animal):
         super().__init__('snake')
 
     def leg_count(self):
-        print('I have no legs, dummy')
+        return 0
 
 
 def animal_leg_count(animals: list):
     count = 0
     for animal in animals:
-        count += animal.leg_count()
+        if isinstance(animal, Animal):
+            count += animal.leg_count()
     return count
 
 

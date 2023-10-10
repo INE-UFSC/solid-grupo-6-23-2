@@ -13,6 +13,9 @@ class Animal:
     def get_name(self) -> str:
         pass
 
-    # salva no DB
-    def save(self, animal: Animal):
+class DataSave:
+    def __init__(self, animal: Animal) -> None:
+        self.__animal = animal
+
+    def save(self):
         pass
